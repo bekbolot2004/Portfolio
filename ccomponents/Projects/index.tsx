@@ -58,15 +58,15 @@ function Projects({ }: Props) {
     return (
         <>
             {ProjectList.map((item) =>
-                <div className={`col-span-12 md:col-span-6 rounded-3xl  ${item.color} overflow-hidden p-6 min-[500px]:p-8 grid gap-6`}>
+                <div key={item.id} className={`col-span-12 md:col-span-6 rounded-3xl  ${item.color} overflow-hidden p-6 min-[500px]:p-8 grid gap-6`}>
                     <div className=''>
                         <div className='flex justify-between'>
                             <div>
                                 <h2 className='text-2xl text-white'>{item.tittle}</h2>
                                 <p className=' text-white'>{item.description}</p>
                                 <div className='flex flex-wrap mt-4 gap-2'>
-                                    {item.technology.map((technology) => (
-                                        <p className='bg-black/20 px-4 py-[2px] rounded-md text-white'>{technology}</p>
+                                    {item.technology.map((technology, i) => (
+                                        <p key={i} className='bg-black/20 px-4 py-[2px] rounded-md text-white'>{technology}</p>
                                     ))}
                                 </div>
                             </div>

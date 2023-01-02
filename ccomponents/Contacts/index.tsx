@@ -21,7 +21,7 @@ function Contacts({ }: Props) {
                 <a href={`mailto:${ContactsList.email}`} className='h-12 w-[300px] flex justify-center items-center max-sm:w-full rounded-full bg-black text-white hover:scale-105 transition-all'>Contact me</a>
                 <div className='flex gap-2 max-sm:justify-between w-full'>
                     {linksSocial.map((link) =>
-                        <a href={link.url} className={`flex justify-center items-center  bg-black h-12 w-12 rounded-full bg-[${link.color}]`}>
+                        <a key={link.id} href={link.url} className={`flex justify-center items-center  bg-black h-12 w-12 rounded-full bg-[${link.color}]`}>
                             <Image
                                 alt='Author'
                                 src={link.icon}

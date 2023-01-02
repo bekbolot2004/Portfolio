@@ -1,11 +1,11 @@
 import { Inter } from '@next/font/google'
-import About from '../Components/About'
-import Contacts from '../Components/Contacts'
-import Experience from '../Components/Experience'
-import MainLayout from '../Components/Layout/MainLayout'
-import MainSection from '../Components/MainSection'
-import Projects from '../Components/Projects'
-import Skills from '../Components/Skills'
+import About from '../ccomponents/About'
+import Contacts from '../ccomponents/Contacts'
+import Experience from '../ccomponents/Experience'
+import MainLayout from '../ccomponents/Layout/MainLayout'
+import MainSection from '../ccomponents/MainSection'
+import Projects from '../ccomponents/Projects'
+import Skills from '../ccomponents/Skills'
 
 const inter = Inter({ subsets: ['latin'] })
 

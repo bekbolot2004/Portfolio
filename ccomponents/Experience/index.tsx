@@ -58,7 +58,7 @@ function Experience({ }: Props) {
             <h2 className='font-semibold text-3xl'>Experience</h2>
             <div className='mt-10 grid grid-cols-1 gap-10'>
                 {experienceList.map((item) => (
-                    <div className=''>
+                    <div className='' key={item.id}>
                         <p className='col-span-1 font-medium text-xs text-black/60'>{item.since} - {item.until} {item.countMonth && `-  ${item.countMonth} month`}</p>
                         <h2 className=' text-2  text-2xl font-semibold'>{item.tittle}</h2>
                         <p className=' text-lg font-medium'>{item.jobTitle}</p>

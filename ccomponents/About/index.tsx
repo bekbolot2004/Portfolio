@@ -57,7 +57,7 @@ function About({ }: Props) {
             <h2 className='font-semibold text-3xl'>About me</h2>
             <div className='grid grid-cols-1 mt-4 gap-2'>
                 {aboutMe.map((item) => (
-                    <div className=''>
+                    <div className='' key={item.id}>
                         <p className='text-white/80'>{item.tittle}: <span className='font-semibold text-white'>{item.secondTittle}</span></p>
                     </div>
                 ))}

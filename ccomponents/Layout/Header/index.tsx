@@ -48,7 +48,7 @@ function Header({ }: Props) {
                 </div>
                 <div className='flex gap-10 max-sm:hidden'>
                     {linksList && linksList.map((item) =>
-                        <a href={item.href}>
+                        <a href={item.href} key={item.id}>
                             <Button variant="text" sx={{ textTransform: 'capitalize', fontWeight: 'medium', color: 'black' }}><p className={`text-sm font-medium text-black${item.id !== 1 && '/50'}`}>{item.tittle}</p></Button>
                         </a>
                     )}
@@ -79,7 +79,7 @@ function Header({ }: Props) {
                     </div>
                     <div className='grid gap-3 mt-10'>
                         {linksList && linksList.map((item) =>
-                            <a href={item.href} className={`text-[32px] font-medium text-black${item.id !== 1 && '/50'}`} onClick={closeDrawer}>{item.tittle}</a>
+                            <a key={item.id} href={item.href} className={`text-[32px] font-medium text-black${item.id !== 1 && '/50'}`} onClick={closeDrawer}>{item.tittle}</a>
                         )}
                     </div>
                 </div>
