@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './style.module.scss'
-import photoAuthor from './assets/photoAuthor.png'
+import photoAuthor from './assets/photoAuthor.jpg'
 import Button from '@mui/material/Button/Button'
 import Image from 'next/image'
 import instagramSvg from './assets/instagram.svg'
