@@ -81,6 +81,7 @@ function Header({ }: Props) {
                         {linksList && linksList.map((item) =>
                             <a key={item.id} href={item.href} className={`text-[32px] font-medium text-black${item.id !== 1 && '/50'}`} onClick={closeDrawer}>{item.tittle}</a>
                         )}
+                        <a href='https://drive.google.com/file/d/1mwm6ZONoZF00OGutm1tgM8jIhGwVGSQX/view?usp=sharing' target='_self'></a>
                     </div>
                 </div>
             </Drawer>
