@@ -54,7 +54,7 @@ function Experience({ }: Props) {
     ]
 
     return (
-        <div className='col-span-12 lg:col-span-8 bg-[#90afff] rounded-3xl p-8 '>
+        <div className='col-span-12 lg:col-span-8 bg-[#90afff] rounded-4xl p-8 '>
             <h2 className='font-semibold text-3xl'>Experience</h2>
             <div className='mt-10 grid grid-cols-1 gap-10'>
                 {experienceList.map((item) => (

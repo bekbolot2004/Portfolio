@@ -14,8 +14,11 @@ function MainLayout({ children }: Props) {
             <Head>
                 <title>Portfolio - Jantay</title>
                 <link rel="icon" href="../../../public/favicon.ico" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"></link>
             </Head>
-            <div className='max-w-[1200px] container mx-auto px-4'>
+            <div className=''>
                 <Header />
                 <div>
                     {children}

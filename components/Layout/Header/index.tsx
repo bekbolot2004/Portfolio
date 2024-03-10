@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logoSvg from './assets/logo.svg'
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -8,6 +8,24 @@ import CloseIcon from '@mui/icons-material/Close';
 type Props = {}
 
 function Header({ }: Props) {
+    const [header, setHeader] = useState(false)
+
+    const scrollHeader = () => {
+        if (window.scrollY >= 20) {
+            setHeader(true)
+        } else {
+            setHeader(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHeader)
+
+        return () => {
+            window.addEventListener('scroll', scrollHeader)
+        }
+    })
+
     const [isDrawerOpened, setIsDrawerOpened] = React.useState(false)
 
     function closeDrawer() {
@@ -37,27 +55,33 @@ function Header({ }: Props) {
     ]
 
     return (
-        <>
-            <div className='flex justify-between items-center py-4'>
-                <div className="h-6 relative">
-                    <Image
-                        src={logoSvg}
-                        alt="Logo"
-                        height={28}
-                    />
-                </div>
-                <div className='flex gap-10 max-sm:hidden'>
-                    {linksList && linksList.map((item) =>
-                        <a href={item.href} key={item.id}>
-                            <Button variant="text" sx={{ textTransform: 'capitalize', fontWeight: 'medium', color: 'black' }}><p className={`text-sm font-medium text-black${item.id !== 1 && '/50'}`}>{item.tittle}</p></Button>
-                        </a>
-                    )}
-                </div>
-                {/* <IconButton aria-label="delete" size="large">
-                <MenuIcon />
-            </IconButton> */}
-                <div className='min-[640px]:hidden'>
-                    <Button variant="text" sx={{ color: 'black' }} size='small' onClick={openDrawer}><MenuIcon fontSize='large' /></Button>
+        <div className='fixed top-4 left-0 w-full z-50 '>
+            <div className='container sm mx-auto px-4'>
+                <div className={`${header ? "bg-white drop-shadow" : ""} p-4 flex justify-between items-center rounded-full transition-all duration-1000`}>
+                    <div className="h-6 relative flex">
+                        <div>
+                            <p className='relative uppercase font-bold'>Jantay
+                                <span className="absolute top-0 left-full flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className='flex gap-10 max-sm:hidden'>
+                        {linksList && linksList.map((item) =>
+                            <a href={item.href} key={item.id}>
+                                <Button variant="text" sx={{ textTransform: 'capitalize', fontWeight: 'medium', color: 'black' }}><p className={`text-sm font-medium text-black${item.id !== 1 && '/50'}`}>{item.tittle}</p></Button>
+                            </a>
+                        )}
+                    </div>
+                    {/* <IconButton aria-label="delete" size="large">
+                        <MenuIcon />
+                    </IconButton> */}
+                    <div className='min-[640px]:hidden'>
+                        <Button variant="text" sx={{ color: 'black' }} size='small' onClick={openDrawer}><MenuIcon fontSize='large' /></Button>
+                    </div>
                 </div>
             </div>
             <Drawer
@@ -85,7 +109,7 @@ function Header({ }: Props) {
                     </div>
                 </div>
             </Drawer>
-        </>
+        </div>
     )
 }
 
