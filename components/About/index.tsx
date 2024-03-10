@@ -122,7 +122,10 @@ function About({ }: Props) {
                             <span className="absolute inset-0 border-2 border-black rounded-full"></span>
                         </Link>
                     )}
-
+                </div>
+                <div className='flex items-center max-sm:flex-col gap-2 mt-5'>
+                    <a href={`mailto:${ContactsList.email}`} className='py-6 w-[300px] flex justify-center items-center max-sm:w-full rounded-full bg-black text-white uppercase text-xl'>Get in touch</a>
+                    <a href={`mailto:${ContactsList.email}`} className='py-6 w-[300px] flex justify-center items-center max-sm:w-full rounded-full border-2 border-black uppercase text-xl'>Download my cv</a>
                 </div>
             </div>
             <div className={`bg-secondary flex flex-col justify-between col-span-12 md:col-span-12 rounded-4xl cssSelector p-6`}>
@@ -130,10 +133,7 @@ function About({ }: Props) {
                     A creative and versatile digital designer with over five years of experience in designing and developing engaging digital media for various platforms and audiences. Skilled in using Adobe Creative Suite, HTML, CSS, JavaScript, and WordPress to create responsive websites, social media graphics, animations, e-books, and interactive campaigns.
                     creative and versatile digital designer with over five years of experience in designing and developing engaging digital media for various platforms and audiences. Skilled in using Adobe Creative Suite, HTML, CSS, JavaScript.
                 </p>
-                {/* <div className='flex items-center max-sm:flex-col gap-2 mt-5'>
-                    <a href={`mailto:${ContactsList.email}`} className='py-6 w-[300px] flex justify-center items-center max-sm:w-full rounded-full bg-black text-white uppercase text-xl'>Get in touch</a>
-                    <a href={`mailto:${ContactsList.email}`} className='py-6 w-[300px] flex justify-center items-center max-sm:w-full rounded-full border-2 border-black uppercase text-xl'>Download my cv</a>
-                </div> */}
+                
             </div>
             {/* grid grid-cols-12 gap-4 md:gap-5  */}
 
