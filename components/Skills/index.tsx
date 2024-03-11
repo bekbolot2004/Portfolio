@@ -18,7 +18,7 @@ function Skills({ }: Props) {
     const SkillsList = ["Html", "Css", "JavaScript", "React", "TypeScript", "Git", "Sass", 'Heroku', 'Tailwind Css', 'Material UI', 'Next.js', "Adaptive", "Figma", "Ux/Ui", "Team Works", "Communication"]
 
     return (
-        <div className=' bg-[#EB4757] rounded-4xl p-8 text-white'>
+        <div className='col-span-4 bg-secondary rounded-4xl p-8 text-white'>
             <h2 className='font-semibold text-3xl'>Skills</h2>
             <div className='flex flex-wrap mt-4 gap-2'>
                 {SkillsList.map((skill, i) => (

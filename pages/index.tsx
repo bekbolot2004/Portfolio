@@ -48,20 +48,12 @@ export default function Home() {
         height: '6px'
       }} />
       <MainLayout>
-        <div>
-          <MainSection />
-          <div className='container mx-auto px-4'>
-            <div className='grid grid-cols-12 gap-4 md:gap-5 '>
-              <About />
-              <Experience />
-              <div className='col-span-12 lg:col-span-4  grid max-md:grid-cols-1 max-lg:grid-cols-2 gap-4 md:gap-5'>
-                <Skills />
-              </div>
-              <Projects />
-              <Contacts />
-            </div>
-          </div>
-        </div>
+        <MainSection />
+        <About />
+        {/* <Skills /> */}
+        <Experience />
+        <Projects />
+        <Contacts />
       </MainLayout>
     </ThemeProvider>
   )

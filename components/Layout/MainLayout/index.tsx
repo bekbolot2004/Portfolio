@@ -18,9 +18,9 @@ function MainLayout({ children }: Props) {
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"></link>
             </Head>
-            <div className=''>
+            <div className='container mx-auto px-4 mb-20 mt-32'>
                 <Header />
-                <div>
+                <div className='grid grid-cols-12 gap-4 md:gap-8 min-h-screen mt-10 mb-20 '>
                     {children}
                 </div>
                 <Footer />

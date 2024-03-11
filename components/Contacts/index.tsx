@@ -1,9 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import { ContactsList } from '../data'
-import { linksSocial } from '../About/index'
 import Form from './Form'
-import Link from 'next/link'
 
 
 type Props = {}
@@ -25,22 +21,6 @@ function Contacts({ }: Props) {
                     <h2 className='text-center text-4xl font-semibold w-1/2'>Send me message, I’ll reply within 12 hours</h2>
                 </div>
                 <Form />
-            </div>
-            <div className={`bg-black text-white flex flex-col justify-between col-span-12 rounded-4xl cssSelector p-20 text-center`}>
-                <h1 className='text-6xl font-semibold'>
-                    Let’s drop your ideas here
-                </h1>
-                {/* <p className='mt-[40px] text-xl font-light'>Let’s drop your ideas here</p> */}
-                <div className='mt-[60px]'>
-                    <Link href="/" className='bg-white text-black text-lg  mt-4 px-6 py-3 rounded-full hover:bg-gray-300'>{ContactsList.email}</Link>
-                </div>
-                <div className='flex justify-center gap-8 mt-5'>
-                    {linksSocial.map((link) =>
-                        <a key={link.id} href={link.url} className={`flex  justify-center items-center py-10 text-xl text-whtie hover:text-gray-300`}>
-                            {link.title}
-                        </a>
-                    )}
-                </div>
             </div>
         </>
     )
