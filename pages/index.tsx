@@ -1,6 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { Inter } from '@next/font/google'
 import { motion, useScroll, useSpring } from 'framer-motion'
+import React from 'react'
 import About from '../components/About'
 import Contacts from '../components/Contacts'
 import Experience from '../components/Experience'
