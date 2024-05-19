@@ -1,34 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        secondary: '#f2f4f7'
-      },
-      borderRadius: {
-        '4xl': '40px',
-      }
-    },
-    container: {
-      // you can configure the container to be centered
-      center: true,
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+	],
+	theme: {
+		extend: {
+			colors: {
+				secondary: '#f2f4f7',
+				secondaryhover: '#d3d6da',
+			},
+			borderRadius: {
+				'4xl': '40px',
+			},
+		},
+		container: {
+			// you can configure the container to be centered
+			center: true,
 
-      // or have default horizontal padding
-      padding: '1rem',
+			// or have default horizontal padding
+			padding: '1rem',
 
-      // default breakpoints but with 40px removed
-      screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        xl: '1240px',
-        '2xl': '1496px',
-      },
-    },
-  },
-  plugins: [],
+			// default breakpoints but with 40px removed
+			screens: {
+				sm: '600px',
+				md: '728px',
+				lg: '984px',
+				xl: '1240px',
+				'2xl': '1496px',
+			},
+		},
+	},
+	plugins: [],
 }

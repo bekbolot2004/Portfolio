@@ -16,7 +16,7 @@ function Footer({}: Props) {
 	}
 
 	const handleCopy = () => {
-		const text = 'hsu@jsmastery.pro'
+		const text = 'bzantaev@gmail.com'
 		navigator.clipboard.writeText(text)
 		setCopied(true)
 	}
@@ -24,17 +24,13 @@ function Footer({}: Props) {
 		<div
 			className={`bg-black text-white flex flex-col justify-between col-span-12 rounded-4xl cssSelector py-20 text-center`}
 		>
-			<h1 className='text-7xl font-semibold pt-10'>
-				Let’s drop your ideas here
-			</h1>
+			<div id='about' className='col-span-12 flex justify-center pt-8'>
+				<h1 className='w-3/4 text-center text-6xl font-bold uppercase '>
+					Let’s drop your ideas here
+				</h1>
+			</div>
 			{/* <p className='mt-[40px] text-xl font-light'>Let’s drop your ideas here</p> */}
 			<div className='mt-[60px]'>
-				{/* <Link
-					href='/'
-					className='bg-white text-black text-lg  mt-4 px-6 py-3 rounded-full hover:bg-gray-300'
-				>
-					{ContactsList.email}
-				</Link> */}
 				<MagicButton
 					title={copied ? 'Email is Copied!' : 'Copy my email address'}
 					icon={<div></div>}

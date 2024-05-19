@@ -47,6 +47,7 @@ export default function Home() {
 					top: '0',
 					width: '100%',
 					height: '6px',
+					zIndex: '1000',
 				}}
 			/>
 			<MainLayout>
